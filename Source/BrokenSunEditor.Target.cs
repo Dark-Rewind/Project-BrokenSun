@@ -3,13 +3,13 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class BlackLightEditorTarget : TargetRules
+public class BrokenSunEditorTarget : TargetRules
 {
-	public BlackLightEditorTarget(TargetInfo Target) : base(Target)
+	public BrokenSunEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_4;
-		ExtraModuleNames.Add("BlackLight");
+		ExtraModuleNames.Add("BrokenSun");
 	}
 }

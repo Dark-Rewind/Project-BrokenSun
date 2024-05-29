@@ -5,7 +5,7 @@
 	"Description": "",
 	"Modules": [
 		{
-			"Name": "BlackLight",
+			"Name": "BrokenSun",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}

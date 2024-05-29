@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "BlackLightCharacter.h"
+#include "BrokenSunCharacter.h"
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -14,9 +14,9 @@
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 //////////////////////////////////////////////////////////////////////////
-// ABlackLightCharacter
+// ABrokenSunCharacter
 
-ABlackLightCharacter::ABlackLightCharacter()
+ABrokenSunCharacter::ABrokenSunCharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -54,7 +54,7 @@ ABlackLightCharacter::ABlackLightCharacter()
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
 
-void ABlackLightCharacter::BeginPlay()
+void ABrokenSunCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
@@ -63,7 +63,7 @@ void ABlackLightCharacter::BeginPlay()
 //////////////////////////////////////////////////////////////////////////
 // Input
 
-void ABlackLightCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void ABrokenSunCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	// Add Input Mapping Context
 	if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
@@ -82,10 +82,10 @@ void ABlackLightCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
 		// Moving
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ABlackLightCharacter::Move);
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ABrokenSunCharacter::Move);
 
 		// Looking
-		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ABlackLightCharacter::Look);
+		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ABrokenSunCharacter::Look);
 	}
 	else
 	{
@@ -93,7 +93,7 @@ void ABlackLightCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	}
 }
 
-void ABlackLightCharacter::Move(const FInputActionValue& Value)
+void ABrokenSunCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
@@ -116,7 +116,7 @@ void ABlackLightCharacter::Move(const FInputActionValue& Value)
 	}
 }
 
-void ABlackLightCharacter::Look(const FInputActionValue& Value)
+void ABrokenSunCharacter::Look(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D LookAxisVector = Value.Get<FVector2D>();

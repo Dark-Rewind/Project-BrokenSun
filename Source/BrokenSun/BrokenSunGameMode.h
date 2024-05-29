@@ -4,15 +4,15 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "BlackLightGameMode.generated.h"
+#include "BrokenSunGameMode.generated.h"
 
 UCLASS(minimalapi)
-class ABlackLightGameMode : public AGameModeBase
+class ABrokenSunGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
 public:
-	ABlackLightGameMode();
+	ABrokenSunGameMode();
 };
 
 

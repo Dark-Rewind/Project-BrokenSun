@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class BlackLight : ModuleRules
+public class BrokenSun : ModuleRules
 {
-	public BlackLight(ReadOnlyTargetRules Target) : base(Target)
+	public BrokenSun(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
